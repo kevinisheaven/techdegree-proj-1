@@ -10,14 +10,30 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
+quotes = [
+  { quote: 'It’s fine to celebrate success but it is more important to heed the lessons of failure.', source: 'Bill Gates'},
+  { quote: "I've always done whatever I want and always been exactly who I am", source: "Billie Eilish"},
+  { quote: "I've been watching you for some time. Can't stop staring at those ocean eyes", source: "Billie Eilish"},
+  { quote: "Software is a great combination between artistry and engineering.", source: "Bill Gates"},
+  { quote: "Patience is a key element of success", source: "Bill Gates"}
 
+]
 
 
 /***
  * `getRandomQuote` function
 ***/
+function getRandomQuote(arr) {
+  for (let i = 0; arr.length; i++)
+let quote = quotes[i].quote
+alert(quote)
+  // let randQuo = Math.floor(Math.random() * quotes.length);
+  // randQuo = quotes.length[i]
+  // console.log(randQuo)
+//alert(arr[i])
 
-
+}
+//console.log(getRandomQuote(quotes))
 
 /***
  * `printQuote` function
