@@ -19,8 +19,8 @@ let quotes = [
 ]
 console.log(Object.keys(quotes[0]))
 
-console.log(Object.values(quotes[1]))
-console.log(Object.values(quotes[3]))
+console.log(Object.values(quotes[0]))
+console.log(Object.keys(quotes[2]))
 console.log("hello world")
 
 
@@ -29,11 +29,12 @@ console.log("hello world")
  * `getRandomQuote` function
 ***/
 
-
+//grabs an array and a number
   function getRandomQuote(arr, num) {
       return(arr[num].quote)
   }
 
+  //generates a raondom number from the quotes array 
     let randomNum = Math.floor(Math.random() * quotes.length);
      console.log("RANDOM NUMBER: ", randomNum)
 
