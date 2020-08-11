@@ -16,39 +16,38 @@ let quotes = [
   { quote: "I've been watching you for some time. Can't stop staring at those ocean eyes", source: "Billie Eilish", citation: "album"},
   { quote: "Software is a great combination between artistry and engineering.", source: "Bill Gates"},
   { quote: "Patience is a key element of success", source: "Bill Gates"}
-
 ]
-console.log(Object.keys(quotes[1]))
+console.log(Object.keys(quotes[0]))
 
 console.log(Object.values(quotes[1]))
+console.log(Object.values(quotes[3]))
+console.log("hello world")
+
 
 //let quoteArr = [];
 /***
  * `getRandomQuote` function
 ***/
-//  function getRandomQuote(arr) {
-//    for (let i = 0; arr.length; i++) {
-//     let getQuote = arr[i];
-//     let aQuote = Object.keys(arr);
-    
-//     if (getQuote === aQuote) {
-//       quoteArr.push(getQuote);
-//       console.log(quoteArr);
-//     }
-//     //console.log(quote)
-//    }
-//   return getQuote;
-//   // let randQuo = Math.floor(Math.random() * quotes.length);
-//   // randQuo = quotes.length[i]
-//   // console.log(randQuo)
-// //alert(arr[i])
 
-//}
-console.log(getRandomQuote(quotes));
+
+  function getRandomQuote(arr, num) {
+      return(arr[num].quote)
+  }
+
+    let randomNum = Math.floor(Math.random() * quotes.length);
+     console.log("RANDOM NUMBER: ", randomNum)
+
+console.log(getRandomQuote(quotes, randomNum));
+
+
 /***
  * `printQuote` function
 ***/
 
+function printQuote(){
+let html = document.querySelector(".quote")
+console.log(html)
+}
 
 
 /***
@@ -56,4 +55,4 @@ console.log(getRandomQuote(quotes));
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-//document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);
