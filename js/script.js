@@ -18,7 +18,6 @@ let quotes = [
   { quote: "Patience is a key element of success", source: "Bill Gates"}
 ]
 console.log(Object.keys(quotes[3]))
-
 console.log(Object.values(quotes[0]))
 console.log(Object.keys(quotes[2]))
 console.log("hello world")
@@ -45,17 +44,42 @@ console.log(getRandomQuote(quotes, randomNum));
  * `printQuote` function
 ***/
 
+
+//prints out just one random quote
+let html = ""
 function printQuote(){
-//let html = document.querySelector(".quote")
- let html = `
+ html = `
  <h2>This is a random quote: ${getRandomQuote(quotes, randomNum)}</h2>
  `;
-
-
  document.querySelector(".quote").innerHTML = html; 
-
-//console.log(html)
 }
+
+
+
+
+
+
+
+
+
+
+//use loop to push values from quotes arrays into their own seperate arrays.
+//then plug the array values with the printQuote function
+// for ( let i = 0; i < quotes.length; i++ ) {
+//   let question = questions[i].question;
+//   let answer = questions[i].answer;
+//   let response = prompt(question);
+  
+//   if ( response === answer ) {
+//     correctAnswers++;
+//     correct.push(question);
+//   } else {
+//     incorrect.push(question);
+//   }
+// }
+
+
+
 
 
 /***
