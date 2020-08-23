@@ -29,15 +29,17 @@ console.log("hello world")
 ***/
 
 //grabs an array and a number. Pulls quote from the index of the array (arr) with the number(num) given
-  function getRandomQuote(arr, num) {
+  function getRandomQuote(arr) {
+    let num = Math.floor(Math.random() * arr.length);
+
       return(arr[num].quote)
   }
 
   //generates a raondom number from the quotes array 
-    let randomNum = Math.floor(Math.random() * quotes.length);
-     console.log("RANDOM NUMBER: ", randomNum)
+   // let randomNum = Math.floor(Math.random() * quotes.length);
+   //  console.log("RANDOM NUMBER: ", randomNum)
 
-console.log(getRandomQuote(quotes, randomNum));
+//console.log(getRandomQuote(quotes, randomNum));
 
 
 /***
@@ -49,7 +51,7 @@ console.log(getRandomQuote(quotes, randomNum));
 let html = ""
 function printQuote(){
  html = `
- <h2>This is a random quote: ${getRandomQuote(quotes, randomNum)}</h2>
+ <h2>This is a random quote: ${getRandomQuote(quotes)}</h2>
  `;
  document.querySelector(".quote").innerHTML = html; 
 }
