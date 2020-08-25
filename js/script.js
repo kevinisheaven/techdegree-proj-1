@@ -51,9 +51,13 @@ let randQuote = getRandomQuote(quotes);
  html = `
  <p class ="quote"> ${randQuote.quote} </p>
  <p class ="source"> ${randQuote.source} 
-    <span class="citation"> ${randQuote.citation} </span>
-    </p>
+    
  `;
+
+ if (Object.keys(randQuote.length) == 3) {
+   alert("hi");
+ }
+ 
  document.querySelector(".quote-box").innerHTML = html; 
 }
 
@@ -62,7 +66,8 @@ let randQuote = getRandomQuote(quotes);
 
 
 
-
+{/* <span class="citation"> ${randQuote.citation} </span>
+    </p> */}
 
 
 
