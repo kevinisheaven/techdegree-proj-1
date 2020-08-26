@@ -28,7 +28,7 @@ console.log("hello world")
  * `getRandomQuote` function
 ***/
 
-//grabs an array and a number. 
+//grabs an array and a random number. 
 //Pulls quote from the index of the array (arr) with the number generated from num
   function getRandomQuote(arr) {
     let num = Math.floor(Math.random() * arr.length);
@@ -45,49 +45,22 @@ let html = ""
 function printQuote(){
 let randQuote = getRandomQuote(quotes);
 
-// if (randQuote === randQuote.citation)
-
 
  html = `
  <p class ="quote"> ${randQuote.quote} </p>
  <p class ="source"> ${randQuote.source} 
     
  `;
-
- if (Object.keys(randQuote.length) == 3) {
-   alert("hi");
- }
- 
- document.querySelector(".quote-box").innerHTML = html; 
+//if quotes contain 
+ if (randQuote.citation) {
+   html+= `<span class="citation"> ${randQuote.citation} </span>`;
+ } else if (randQuote.year) {
+   html+= `<span class="year"> ${randQuote.year} </span>`;
 }
 
-
-
-
-
-
-{/* <span class="citation"> ${randQuote.citation} </span>
-    </p> */}
-
-
-
-//use loop to push values from quotes arrays into their own seperate arrays.
-//then plug the array values with the printQuote function
-// for ( let i = 0; i < quotes.length; i++ ) {
-//   let question = questions[i].question;
-//   let answer = questions[i].answer;
-//   let response = prompt(question);
-  
-//   if ( response === answer ) {
-//     correctAnswers++;
-//     correct.push(question);
-//   } else {
-//     incorrect.push(question);
-//   }
-// }
-
-
-
+html+= `</p>`;
+ document.querySelector(".quote-box").innerHTML = html; 
+}
 
 
 /***
